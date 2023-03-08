@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tilt Neon", sans-serif !important;}
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 90px;
+        background-color: rgb(50, 65, 65);
+      }
+
+      .navbar-menu-container {
+        display: none;
+      }
+
+      .navbar-links-container a {
+        margin-right: 3rem;
+        margin-left: 3rem;
+        text-decoration: none;
+        color: black;
+        font-size: 1.1rem;
+        font-weight: 400;
+      }
