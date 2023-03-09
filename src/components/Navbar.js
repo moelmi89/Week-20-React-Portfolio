@@ -1,30 +1,20 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom";
 
-const Navbar = () => {
+function Navbar () {
+    const [click, setClick] = useState(false);
 
-    const [openMenu, setOpenMenu] = useState(false);
-    const menuOptions = [
-        {
-            text: "Home",
-        },
-        {
-            text: "About",
-        },
-        {
-            text: "Applications",
-        },
-        {
-            text: "Contact",
-        },
-    ]
+    const handleClick = () => setClick(!click);
 
     return (
-    <nav>
-        <div className="navbar-links-container">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Applications</a>
-            <a href="">Contact</a>
+    <nav className="navbar">
+        <div className="navbar-container">
+            <Link to="/" className="navbar-logo">
+                // Name Goes HERE
+            </Link>
+            <div className="menu-icon" onClick={handleClick}>
+                <i className={click ? "fas fa-times" : "fas fa-bars"}/>
+            </div>
         </div>
     </nav>
     )
